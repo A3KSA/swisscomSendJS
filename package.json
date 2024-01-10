@@ -4,8 +4,12 @@
   "description": "JS API to send SMS via the swisscom rest api",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Zacharie Monnet",
-  "license": "Proprietary"
+  "license": "Proprietary",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nock": "^13.4.0"
+  }
 }

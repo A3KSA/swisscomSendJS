@@ -1,3 +1,6 @@
+import fetch from "node-fetch";
+
+
 class Send {
     constructor() {
         this.apiKeyReceive = ''

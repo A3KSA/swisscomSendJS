@@ -1,12 +1,18 @@
 const fetch = require("node-fetch");
 
-
+/**
+ * Class representing the Swisscom SMS send API.
+ * @class
+ */
 class Send {
     constructor() {
         this.apiKeyReceive = ''
     }
 
-    //function to set the API key
+    /**
+     * Sets the API key for the Swisscom API requests.
+     * @param {string} apiKey - The API key for the request.
+     */
     setApiKey(apiKey) {
         this.apiKeyReceive = apiKey
     }

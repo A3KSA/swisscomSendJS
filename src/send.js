@@ -53,7 +53,7 @@ class Send {
             method: "GET",
             headers: this.getHeaders()
         })
-
+        console.log(response)
         if (response.status === 200) {
             const json = await response.json()
             callback(json)

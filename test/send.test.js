@@ -12,20 +12,20 @@ describe('getDeliveryStatus', () => {
         callback = jest.fn();
     });
 
-    // Currently not working with fetch
-    // it('should call the callback with the response when the status is 200', async () => {
-    //     const response = {
-    //         status: 200
-    //     };
 
-    //     nock('https://api.swisscom.com')
-    //         .get(`/messaging/sms/${messageId}`)
-    //         .reply(200, response);
+    it('should call the callback with the response when the status is 200', async () => {
+        const response = {
+            status: 200
+        };
 
-    //     await send.getDeliveryStatus(messageId, callback);
+        nock('https://api.swisscom.com')
+            .get(`/messaging/sms/${messageId}`)
+            .reply(200, response);
 
-    //     expect(callback).toHaveBeenCalledWith(response);
-    // });
+        await send.getDeliveryStatus(messageId, callback);
+
+        expect(callback).toHaveBeenCalledWith(response);
+    });
 
     it('should throw an error when the status is not 200', async () => {
         const response = {

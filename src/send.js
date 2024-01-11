@@ -50,13 +50,20 @@ class Send {
             headers: this.getHeaders(),
             body: JSON.stringify(smsObject)
         })
-        console.log(response)
         if (response.status === 201) {
             const messageId = response.headers.get("SCS-MessageId")
-            callback(messageId)
+
+            /**
+             * Callback function to process the result.
+             */
+            if (callback){
+                callback(messageId)
+            }
+
         } else {
             const json = await response.json()
-            throw new Error('Something went wrong with the Swisscom send API !', response.status);
+            console.log(json)
+            throw new Error('Something went wrong with the Swisscom send API ! ' + response.status);
         }
     }
 
@@ -73,7 +80,7 @@ class Send {
             callback(json)
         } else {
             const json = await response.json()
-            throw new Error('Something went wrong with the Swisscom get delivery status API !', response.statusText);
+            throw new Error('Something went wrong with the Swisscom get delivery status API ! ' + response.status);
         }
     }
 

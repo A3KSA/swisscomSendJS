@@ -8,16 +8,24 @@ class SMS {
      * @param {string} message - The content of the SMS.
      */
     constructor(to, message) {
-        this.to = to || '';
-        this.message = message || '';
+        this._to = to || '';
+        this._message = message || '';
     }
 
     get to() {
-        return this.to;
+        return this._to;
     }
 
     get message() {
-        return this.message;
+        return this._message;
+    }
+
+    set to(to) {
+        this._to = to;
+    }
+
+    set message(message) {
+        this._message = message;
     }
 
     //setter for the message

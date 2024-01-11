@@ -1,6 +1,6 @@
 {
   "name": "@automation3000/swisscomsendjs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "JS API to send SMS via the swisscom rest api",
   "main": "src/index.js",
   "scripts": {

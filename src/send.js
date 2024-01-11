@@ -6,7 +6,7 @@ const fetch = require("node-fetch");
  */
 class Send {
     constructor() {
-        this.apiKeyReceive = ''
+        this.apiKey = ''
     }
 
     /**
@@ -14,7 +14,7 @@ class Send {
      * @param {string} apiKey - The API key for the request.
      */
     setApiKey(apiKey) {
-        this.apiKeyReceive = apiKey
+        this.apiKey = apiKey
     }
 
     /**
@@ -26,7 +26,7 @@ class Send {
         return {
             "SCS-Version": "2",
             "Content-Type": "application/json",
-            Authorization: `Bearer ${this.apiKeyReceive}`
+            Authorization: `Bearer ${this.apiKey}`
         };
     }
 

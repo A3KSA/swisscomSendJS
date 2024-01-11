@@ -51,7 +51,7 @@ class Send {
             callback(messageId)
         } else {
             const json = await response.json()
-            throw new Error('Something went wrong with the Swisscom send API !', response.statusText);
+            throw new Error('Something went wrong with the Swisscom send API !', response.status);
         }
     }
 

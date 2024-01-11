@@ -50,7 +50,7 @@ class Send {
             headers: this.getHeaders(),
             body: JSON.stringify(smsObject)
         })
-
+        console.log(response)
         if (response.status === 201) {
             const messageId = response.headers.get("SCS-MessageId")
             callback(messageId)

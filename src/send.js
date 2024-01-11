@@ -42,7 +42,7 @@ class Send {
 
         const smsObject = {
             to : sms.to,
-            message : sms.message
+            text : sms.message
         }
 
         var response = await fetch(url, {

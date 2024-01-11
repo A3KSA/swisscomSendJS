@@ -12,6 +12,14 @@ class SMS {
         this.message = message || '';
     }
 
+    get to() {
+        return this.to;
+    }
+
+    get message() {
+        return this.message;
+    }
+
     //setter for the message
     setMessage(message) {
         this.message = message;

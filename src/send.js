@@ -40,10 +40,15 @@ class Send {
 
         var url = `https://api.swisscom.com/messaging/sms`
 
+        const smsObject = {
+            to : sms.to,
+            message : sms.message
+        }
+
         var response = await fetch(url, {
             method: "POST",
             headers: this.getHeaders(),
-            body: JSON.stringify(sms)
+            body: JSON.stringify(smsObject)
         })
 
         if (response.status === 201) {

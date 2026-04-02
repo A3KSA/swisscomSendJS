@@ -1,6 +1,6 @@
 {
   "name": "@automation3000/swisscomsendjs",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "JS API to send SMS via the swisscom rest api",
   "main": "src/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "Proprietary",
   "devDependencies": {
     "jest": "^29.7.0",
-    "nock": "^13.4.0"
+    "nock": "^13.5.6"
   },
   "dependencies": {
     "node-fetch": "^2.7.0"
